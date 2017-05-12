@@ -1,0 +1,15 @@
+{
+  "name": "chat-bot",
+  "version": "0.1.0",
+  "description": "A bot that chats",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "chat",
+    "bot"
+  ],
+  "author": "badavis",
+  "license": "MIT"
+}
