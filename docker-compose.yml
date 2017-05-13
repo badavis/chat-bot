@@ -1,0 +1,17 @@
+version: '2'
+services:
+  mongo:
+    hostname: mongo-chat
+    image: mongo
+    ports:
+      - "27027:27017"
+    entrypoint:
+      - /usr/bin/mongod
+
+  # redis:
+  #   hostname: redis
+  #   image: redis
+  #   ports:
+  #     - '6379:6379'
+  #   restart: always
+  #   mem_limit: 128m
