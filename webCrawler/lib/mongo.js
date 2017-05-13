@@ -23,14 +23,14 @@ exports.db = () => {
 const updateOne = (filter, newData, collection) => {
 	return db.collection(collection)
 		.updateOne(filter, { $set: newData })
-		.then(result => Promise.resolve(result))
+		.then(results => Promise.resolve(results))
 		.catch(error => Promise.reject('error', error));
 }
 
 const insert = (data, collection) => {
 	return db.collection(collection)
 		.insert(data)
-		.then(result => Promise.resolve(result))
+		.then(results => Promise.resolve(results))
 		.catch(error => Promise.reject('error', error));
 }
 
@@ -38,7 +38,7 @@ const find = (data, collection) => {
 	return db.collection(collection)
 		.find(data)
 		.toArray()
-		.then(result => Promise.resolve(result))
+		.then(results => Promise.resolve(results))
 		.catch(error => Promise.reject('error', error));
 }
 
