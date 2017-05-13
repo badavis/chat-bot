@@ -2,6 +2,16 @@ const seedData = require("./news");
 const words = seedData.articles.split(' ');
 const dict = { words: [], length: 0 };
 
+const mongo = require('./lib/mongo');
+
+mongo.db()
+  .then(() => {
+    mongo.insert();
+  })
+  .catch(error => {
+
+  });
+
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -43,5 +53,6 @@ for(var i = 0; i < 10; i++) {
   randWord = dict[randWord].words[rand];
 }
 
-console.log(dict)
+
+// console.log(dict)
 console.log(randSentence.join(' '));

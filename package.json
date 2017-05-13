@@ -11,5 +11,9 @@
     "bot"
   ],
   "author": "badavis",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "mongodb": "^2.2.26"
+  }
 }
