@@ -18,7 +18,7 @@ init().then(() => {
 
 function getSeedData() {
   return mongo.find({}, 'seedData').then(seedData => {
-    if (!seedData) {
+    if (!seedData || seedData.length === 0) {
       console.log('No seed data');
       return Promise.resolve('');
     }
